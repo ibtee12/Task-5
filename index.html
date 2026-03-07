@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Issues Tracker</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+  
+<!-- link css -->
+ <link rel="stylesheet" href="./style.css">
+ 
+  </head>
+  <body>
+    <!-- ===================== LOGIN PAGE ===================== -->
+    <div id="login-page">
+      <div class="login-card">
+        <div class="login-logo">
+         <img src="./assets/github-logo.png" alt="">
+        </div>
+        <h1>GitHub Issues Tracker</h1>
+        <p>Sign in to manage your issues</p>
+
+        <div class="form-group">
+          <label>Username</label>
+          <input type="text" id="username" placeholder="Enter Username" />
+          <div class="default-hint">Default: admin</div>
+        </div>
+
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="password" placeholder="Enter Password" />
+          <div class="default-hint">Default: admin123</div>
+        </div>
+
+        <div class="login-error" id="login-error">
+          Invalid username or password.
+        </div>
+
+        <button class="btn-signin" onclick="handleLogin()">Sign In</button>
+
+        <div class="or-divider">OR</div>
+
+        <div class="demo-box">
+          <p>Demo Credentials:</p>
+          <strong>Username:</strong> admin<br />
+          <strong>Password:</strong> admin123
+        </div>
+      </div>
+    </div>
