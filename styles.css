@@ -107,3 +107,71 @@
       .form-group input::placeholder {
         color: #c0c4cc;
       }
+
+            .default-hint {
+        color: var(--accent);
+        font-size: 0.78rem;
+        margin-top: 5px;
+        font-weight: 500;
+      }
+
+      .btn-signin {
+        width: 100%;
+        padding: 14px;
+        background: var(--accent);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        font-family: inherit;
+        cursor: pointer;
+        transition:
+          background 0.2s,
+          transform 0.1s;
+        margin-top: 8px;
+      }
+      .btn-signin:hover {
+        background: var(--accent-hover);
+      }
+      .btn-signin:active {
+        transform: scale(0.99);
+      }
+
+      .or-divider {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 20px 0;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+      .or-divider::before,
+      .or-divider::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--border);
+      }
+
+      .demo-box {
+        background: #f9fafb;
+        border-radius: 10px;
+        padding: 16px 24px;
+        font-size: 0.88rem;
+        color: var(--muted);
+      }
+      .demo-box p {
+        margin-bottom: 6px;
+        font-size: 0.82rem;
+      }
+      .demo-box strong {
+        color: var(--text);
+      }
+
+      .login-error {
+        color: var(--red);
+        font-size: 0.82rem;
+        margin-top: 10px;
+        display: none;
+      }
