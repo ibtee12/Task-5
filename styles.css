@@ -175,3 +175,50 @@
         margin-top: 10px;
         display: none;
       }
+
+      #main-page {
+        display: none;
+      }
+
+      /* Navbar */
+      .navbar {
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        padding: 0 32px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+        font-size: 1rem;
+        color: var(--text);
+        text-decoration: none;
+      }
+
+      .nav-left{
+        display: flex;
+        gap: 5px;
+
+      }
+      .nav-left p{
+        color: black;
+      }
+      .nav-left img{
+        height: 36px;
+        width:36px;
+      }
+
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
