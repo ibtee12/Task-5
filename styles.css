@@ -222,3 +222,199 @@
         align-items: center;
         gap: 12px;
       }
+
+      .search-wrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      .search-icon {
+        position: absolute;
+        left: 11px;
+        color: var(--muted);
+        pointer-events: none;
+      }
+
+      .search-input {
+        padding: 8px 14px 8px 34px;
+        border: 1.5px solid var(--border);
+        border-radius: 8px;
+        font-size: 0.85rem;
+        font-family: inherit;
+        width: 220px;
+        outline: none;
+        transition:
+          border-color 0.2s,
+          width 0.3s;
+        color: var(--text);
+        background: #f9fafb;
+      }
+      .search-input:focus {
+        border-color: var(--accent);
+        width: 280px;
+        background: white;
+      }
+      .search-input::placeholder {
+        color: #c0c4cc;
+      }
+
+      .btn-new-issue {
+        padding: 8px 16px;
+        background: var(--accent);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        font-family: inherit;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: background 0.2s;
+      }
+      .btn-new-issue:hover {
+        background: var(--accent-hover);
+      }
+
+      /* Main Content */
+      .main-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 32px 24px;
+      }
+
+      /* Tab Section */
+      .tab-section {
+        background: var(--white);
+        border-radius: 12px;
+        padding: 16px 24px;
+        margin-bottom: 24px;
+        box-shadow: var(--shadow);
+      }
+
+      .tabs {
+        display: flex;
+        gap: 4px;
+      }
+
+      .tab-btn {
+        padding: 8px 20px;
+        border: 1.5px solid var(--border);
+        background: transparent;
+        border-radius: 8px;
+        font-size: 0.88rem;
+        font-weight: 600;
+        font-family: inherit;
+        cursor: pointer;
+        color: var(--muted);
+        transition: all 0.2s;
+      }
+      .tab-btn:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+      .tab-btn.active {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: white;
+      }
+
+      /* Issues Header */
+      .issues-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: var(--white);
+        border-radius: 12px;
+        padding: 20px 24px;
+        margin-bottom: 24px;
+        box-shadow: var(--shadow);
+      }
+
+      .issues-header-left {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .issues-icon {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .issues-icon svg {
+        width: 22px;
+        height: 22px;
+        fill: white;
+      }
+
+      .issues-count {
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+      .issues-subtext {
+        font-size: 0.82rem;
+        color: var(--muted);
+        margin-top: 2px;
+      }
+
+      .legend {
+        display: flex;
+        gap: 16px;
+      }
+      .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.85rem;
+        font-weight: 500;
+      }
+      .dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+      }
+      .dot-green {
+        background: var(--green);
+      }
+      .dot-purple {
+        background: var(--purple);
+      }
+
+      /* Cards Grid */
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+      }
+
+      @media (max-width: 1024px) {
+        .cards-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (max-width: 768px) {
+        .cards-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .search-input {
+          width: 160px;
+        }
+      }
+      @media (max-width: 480px) {
+        .cards-grid {
+          grid-template-columns: 1fr;
+        }
+        .navbar {
+          padding: 0 16px;
+        }
+        .main-content {
+          padding: 16px;
+        }
+      }
