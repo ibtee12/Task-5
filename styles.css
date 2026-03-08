@@ -418,3 +418,129 @@
           padding: 16px;
         }
       }
+
+      /* Issue Card */
+      .issue-card {
+        background: var(--white);
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        border-top-width: 3px;
+        padding: 16px;
+        cursor: pointer;
+        transition:
+          box-shadow 0.2s,
+          transform 0.15s;
+        box-shadow: var(--shadow);
+      }
+      .issue-card:hover {
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-2px);
+      }
+      .issue-card.open {
+        border-top-color: var(--green);
+      }
+      .issue-card.closed {
+        border-top-color: var(--purple);
+      }
+
+      .card-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 12px;
+      }
+
+      .card-status-icon svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      .priority-badge {
+        font-size: 0.7rem;
+        font-weight: 700;
+        padding: 3px 10px;
+        border-radius: 20px;
+        letter-spacing: 0.03em;
+        font-family: "JetBrains Mono", monospace;
+      }
+      .priority-HIGH { background: #ef4444; color: white; border-radius: 20px; }
+.priority-MEDIUM { background: #f97316; color: white; border-radius: 20px; }
+.priority-LOW { background: #22c55e; color: white; border-radius: 20px; }
+
+      .card-title {
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--text);
+        line-height: 1.4;
+        margin-bottom: 8px;
+      }
+
+      .card-desc {
+        font-size: 0.78rem;
+        color: var(--muted);
+        line-height: 1.5;
+        margin-bottom: 10px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .card-labels {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-bottom: 12px;
+      }
+
+      .label-badge {
+        font-size: 0.68rem;
+        font-weight: 600;
+        padding: 3px 8px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .label-bug {
+        background: #fef2f2;
+        color: #ef4444;
+        border: 1px solid #fecaca;
+      }
+      .label-enhancement {
+        background: #f0fdf4;
+        color: #16a34a;
+        border: 1px solid #bbf7d0;
+      }
+      .label-help {
+        background: #fff7ed;
+        color: #c2410c;
+        border: 1px solid #fed7aa;
+      }
+      .label-question {
+        background: #eff6ff;
+        color: #1d4ed8;
+        border: 1px solid #bfdbfe;
+      }
+      .label-documentation {
+        background: #faf5ff;
+        color: #7c3aed;
+        border: 1px solid #ddd6fe;
+      }
+      .label-default {
+        background: #f3f4f6;
+        color: #374151;
+        border: 1px solid #d1d5db;
+      }
+
+      .card-meta {
+        font-size: 0.72rem;
+        color: #9ca3af;
+        border-top: 1px solid #f3f4f6;
+        padding-top: 10px;
+      }
+      .card-meta .issue-num {
+        font-weight: 600;
+        color: var(--muted);
+      }
