@@ -51,3 +51,104 @@
         </div>
       </div>
     </div>
+
+    <div id="main-page">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="nav-left"><a class="nav-brand" href="#">
+          <img src="./assets/github-logo.png" alt="">
+          <p>GitHub Issues Tracker</p>
+          </a>       
+        </div>
+        <div class="nav-right">
+          <div class="search-wrap">
+            <svg
+              class="search-icon"
+              width="14"
+              height="14"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <input
+              class="search-input"
+              id="search-input"
+              placeholder="Search issues..."
+              oninput="handleSearch(this.value)"
+            />
+          </div>
+          <button class="btn-new-issue">
+            <svg
+              width="14"
+              height="14"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              viewBox="0 0 24 24"
+            >
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+            New Issue
+          </button>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Tabs -->
+        <div class="tab-section">
+          <div class="tabs">
+            <button class="tab-btn active" onclick="setTab('all', this)">
+              All
+            </button>
+            <button class="tab-btn" onclick="setTab('open', this)">Open</button>
+            <button class="tab-btn" onclick="setTab('closed', this)">
+              Closed
+            </button>
+          </div>
+        </div>
+
+        <!-- Issues Header -->
+        <div class="issues-header">
+          <div class="issues-header-left">
+            <div class="issues-icon">
+              <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                <path
+                  fill-rule="evenodd"
+                  d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0z"
+                />
+              </svg>
+            </div>
+            <div>
+              <div class="issues-count" id="issues-count">0 Issues</div>
+              <div class="issues-subtext">
+                Track and manage your project issues
+              </div>
+            </div>
+          </div>
+          <div class="legend">
+            <div class="legend-item">
+              <div class="dot dot-green"></div>
+              Open
+            </div>
+            <div class="legend-item">
+              <div class="dot dot-purple"></div>
+              Closed
+            </div>
+          </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="cards-grid" id="cards-grid">
+          <div class="spinner-wrap"><div class="spinner"></div></div>
+        </div>
+      </div>
+    </div>
+
+    
